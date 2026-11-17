@@ -11,6 +11,9 @@ export default function App() {
     <div>
       <Link to="/">Home</Link>
       <Link to="/favorites">Favorites</Link>
+      <Link to="/category/:name">Category</Link>
+      <Link to="/recipe/:id">Recipe Details</Link>
+      <Link to="/search">Search</Link>
 
 
       <Routes>
