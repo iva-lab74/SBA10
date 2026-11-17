@@ -1,0 +1,15 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 1rem;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+nav form {
+  display: flex;
+  gap: 0.5rem;
+}
