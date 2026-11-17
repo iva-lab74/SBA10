@@ -10,6 +10,8 @@ export default function RecipeDetail() {
     const { data, loading, error } = useFetch(
         `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
     )
+    //favs
+    const { isFavorite, addFavorite, removeFavorite } = useFavorites()
 
     //error
     if (loading) return <p>Loading...</p>
@@ -24,14 +26,14 @@ export default function RecipeDetail() {
     //fav button
     function toggleFavorite() {
         fav ? removeFavorite(meal.idMeal) : addFavorite(meal.idMeal)
-
-        return (
-            <div>
-                <h1>{meal.strMeal}</h1>
-                <button onClick={toggleFavorite}>{fav ? 'Remove from Favorites' : 'Add to Favorites'}</button>
-                <h2>Instructions</h2>
-                <p>{meal.strInstructions}</p>
-            </div>
-        )
     }
+    return (
+        <div>
+            <h1>{meal.strMeal}</h1>
+            <button onClick={toggleFavorite}>{fav ? 'Remove from Favorites' : 'Add to Favorites'}</button>
+            <h2>Instructions</h2>
+            <p>{meal.strInstructions}</p>
+        </div>
+    )
 }
+

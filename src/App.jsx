@@ -2,7 +2,6 @@ import { Routes, Route, Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
-
 import Home from './pages/Home'
 import Category from './pages/Category'
 import RecipeDetail from './pages/RecipeDetail'
