@@ -25,8 +25,7 @@ export default function useFetch(url) {
             .catch((err) => setError(err.message))
 
             .finally(() => setLoading(false))
-
-    })
+    }, [url])
 
     return { data, loading, error }
 }
