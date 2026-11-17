@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react'
 //favorites stay in local storage
-import useLocalStorage from '../hooks/useLocalStorage'
+import {useLocalStorage} from '../hooks/useLocalStorage'
 
 //container, stated
 const FavoritesContext = createContext(null)
